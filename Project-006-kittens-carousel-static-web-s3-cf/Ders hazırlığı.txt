@@ -1,0 +1,13 @@
+Ders öncesi:
+
+1. Clarusway-aws-devops-12 repomuzu pull edip güncelleyelim,
+2. AWS consola N.Virginia'dan bağlanalım,
+3. CloudFormation-Certificate Manager-S3-CloudFront-Route53 servislerini ayrı sekmelerde açalım,
+4. Aşağıdaki linkleri ayrı sekmelerde hazır edelim,
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesDomainName
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html
+5. Capstone öncesi son projemizde uçmaya hazır olalım...
