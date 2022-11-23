@@ -1,7 +1,7 @@
 # Project-101 : Carousel Static Website deployed on AWS EC2 using Cloudformation
 
 ## Description
-Kittens Carousel is a static website application deployed with Apache Web Server on AWS Elastic Compute Cloud (EC2) Instance using AWS Cloudformation Service. 
+Kittens  is a static website application deployed with Apache Web Server on AWS Elastic Compute Cloud (EC2) Instance using AWS Cloudformation Service. 
 
 ## Problem Statement
 
