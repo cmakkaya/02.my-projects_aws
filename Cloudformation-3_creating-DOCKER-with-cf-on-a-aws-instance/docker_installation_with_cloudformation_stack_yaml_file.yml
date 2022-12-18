@@ -1,0 +1,33 @@
+Resources:
+  AppNode:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0bbe6b35405ecebdb
+      KeyName: cumhurkey
+      SecurityGroupIds: 
+        - !Ref AppNodeSG
+      UserData: !Base64 | 
+        #!/bin/bash
+        apt-get update -qq
+        apt-get install -y apt-transport-https ca-certificates
+        apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+        echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list
+        apt-get update -qq
+        apt-get purge lxc-docker || true
+        apt-get -y install linux-image-extra-$(uname -r) linux-image-extra-virtual
+        apt-get -y install docker-engine
+        usermod -aG docker imubuntuuser
+  AppNodeSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Security Group for AppNode protocols"
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
