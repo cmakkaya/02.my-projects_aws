@@ -235,3 +235,4 @@ Outputs:
     Value: !Sub 
       - ${PrivateAddress}
       - PrivateAddress: !GetAtt KubeWorker1.PrivateDnsName
+
