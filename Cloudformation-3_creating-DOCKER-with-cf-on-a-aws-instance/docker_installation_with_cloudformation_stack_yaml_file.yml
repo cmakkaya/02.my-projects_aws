@@ -1,10 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+  This Cloudformation Template creates a Docker machine on EC2 Instance. 
+
 Resources:
   AppNode:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
       ImageId: ami-0bbe6b35405ecebdb
-      KeyName: cumhurkey
+      KeyName: cumhurkey    #Change here.
       SecurityGroupIds: 
         - !Ref AppNodeSG
       UserData: !Base64 | 
