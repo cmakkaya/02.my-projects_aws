@@ -47,3 +47,4 @@ Resources:
           echo "M2_HOME=/home/ec2-user/$(ls | grep apache-maven)" >> /home/ec2-user/.bash_profile
           echo 'PATH=$PATH:$M2_HOME/bin' >> /home/ec2-user/.bash_profile
           echo 'export $PATH' >> /home/ec2-user/.bash_profile
+          
